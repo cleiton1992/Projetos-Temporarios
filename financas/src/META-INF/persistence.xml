@@ -5,7 +5,14 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
              version="1.0">
     <persistence-unit name="financas">
+    
         <class>br.com.financas.modelo.Conta</class>
+        <class>br.com.financas.modelo.Movimentacao</class>
+        <class>br.com.financas.modelo.TesteJPARelacionamento</class>
+        <class>br.com.financas.modelo.Categoria</class>
+        <class>br.com.financas.modelo.Cliente</class>
+        <class>br.com.financas.modelo.TipoMovimentacao</class>
+        
         <properties>
             <property name="dialect" value="org.hibernate.dialect.OracleDialect"/> 
             <property name="connection.driver_class" value="oracle.jdbc.driver.OracleDriver"/>
