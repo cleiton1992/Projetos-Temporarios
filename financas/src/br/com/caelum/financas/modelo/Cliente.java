@@ -4,23 +4,32 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
 @Entity
-@SequenceGenerator(name = "SEQ_CLIENTE", sequenceName = "SEQ_CLIENTE")
+@SequenceGenerator(name = "SEQ_CLIENTE1", sequenceName = "SEQ_CLIENTE1")
 public class Cliente {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_CLIENTE")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_CLIENTE1")
 	private Integer id;
     private String nome;
     private String profissao;
     private String endereco;
     
+    
+    @JoinColumn(unique=true)
     @OneToOne
     private Conta conta;
     
+	public Conta getConta() {
+		return conta;
+	}
+	public void setConta(Conta conta) {
+		this.conta = conta;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -45,6 +54,7 @@ public class Cliente {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
+
 	
 	
 }

@@ -7,11 +7,11 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
 @Entity
-@SequenceGenerator(name = "SEQ_CATEGORIA", sequenceName = "SEQ_CATEGORIA")
+@SequenceGenerator(name = "SEQ_CATEGORIA1", sequenceName = "SEQ_CATEGORIA1")
 public class Categoria {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_CATEGORIA")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_CATEGORIA1")
 	private Integer id;
 	private String nome;
 	

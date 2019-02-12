@@ -7,11 +7,11 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
 @Entity //representa uma entidade no banco
-@SequenceGenerator(name = "SEQ_CONTAS", sequenceName = "SEQ_CONTAS", initialValue = 1)
+@SequenceGenerator(name = "SEQ_CONTAS1", sequenceName = "SEQ_CONTAS1", initialValue = 1)
 public class Conta {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_CONTAS")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_CONTAS1")
 	private Integer id;
 	private String titular;
 	private String numero;

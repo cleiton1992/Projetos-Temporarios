@@ -18,11 +18,11 @@ import javax.persistence.TemporalType;
 
 
 @Entity
-@SequenceGenerator(name = "SEQ_MOVIMENTACAO", sequenceName = "SEQ_MOVIMENTACAO")
+@SequenceGenerator(name = "SEQ_MOVIMENTACAO1", sequenceName = "SEQ_MOVIMENTACAO1")
 public class Movimentacao {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_MOVIMENTACAO")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_MOVIMENTACAO1")
 	private Integer id;
 	
 	private BigDecimal valor;

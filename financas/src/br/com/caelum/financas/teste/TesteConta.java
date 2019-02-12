@@ -12,7 +12,7 @@ public class TesteConta {
 	public static void main(String[] args) {
 		
 		Conta conta = new Conta();
-		conta.setId(702);
+		conta.setId(1);
 		conta.setTitular("cliente011");
 		conta.setAgencia("4321");
 		conta.setBanco("Bradesco");
@@ -22,14 +22,14 @@ public class TesteConta {
 		
 		em.getTransaction().begin();
 		
-		conta  = em.find(Conta.class, 702);
+		conta  = em.find(Conta.class, 1);
 		
 		em.remove(conta);
 		
 		conta.setBanco("Bradesco");
 		
 		
-		//em.persist(conta);
+		em.persist(conta);
 		em.getTransaction().commit();
 		em.close();
 	}
