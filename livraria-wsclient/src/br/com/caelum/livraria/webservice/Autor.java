@@ -20,6 +20,7 @@ public class Autor  implements java.io.Serializable {
            java.lang.String nome) {
            this.id = id;
            this.nome = nome;
+           
     }
 
 
